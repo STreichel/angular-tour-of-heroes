@@ -8,15 +8,14 @@ import { MessageService } from './message.service';
 @Injectable({
   providedIn: 'root',
   })
-  import { MessageService } from '.message.service';
 
-  export class HeroService {
+export class HeroService {
 
   constructor(private messageService: MessageService) { }
 
-getHeroes(): Observable<Hero[]> {
-  const heroes = of(HEROES);
-  this.messageService.add('HeroService: fetched heroes');
-  return heroes;
+  getHeroes(): Observable<Hero[]> {
+    const heroes = of(HEROES);
+    this.messageService.add('HeroService: fetched heroes');
+    return heroes;
   }
 }
